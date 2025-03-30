@@ -1,0 +1,71 @@
+.header-container {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc; /* Gray color for the line */
+
+  color: var(--text-color); // Use CSS variable for text color
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; // Ensure content is spaced between
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-color); // Use CSS variable for text color
+  text-decoration: none;
+  margin-right: auto; // Align brand link to the left
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; // Align to the left
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-left: 3em;
+
+    .nav-link {
+      color: var(--text-color); // Use CSS variable for text color
+      text-decoration: none;
+      font-size: 1em; // Increase text size
+      padding-inline: 2em;
+
+      svg {
+        display: block;
+        margin: 0 auto 0.25rem;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  display: flex;
+  align-items: center;
+
+  svg {
+    display: block;
+    margin: 0 auto 0.25rem;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.theme-toggle svg {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.theme-toggle svg:hover {
+  transform: scale(1.2) rotate(10deg);
+}

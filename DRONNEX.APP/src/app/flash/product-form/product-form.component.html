@@ -1,0 +1,70 @@
+
+<h3>Input:</h3>  
+<form [formGroup]="profileForm" class="form-container">
+    <div>
+      <label for="framCode">Frame:</label>
+      <select id="framCode" formControlName="framCode" class="form-control">
+        <option *ngFor="let item of productLookups?.framLookupItems" [value]="item.code">{{ item.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="frameDetails">Frame Details:</label>
+      <input id="frameDetails" type="text" formControlName="frameDetails" readonly>
+    </div>
+
+    <hr>
+
+    <div>
+      <label for="motorCode">Motor:</label>
+      <select id="motorCode" formControlName="motorCode" class="form-control">
+        <option *ngFor="let item of productLookups?.motorLookupItems" [value]="item.code">{{ item.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="motorDetails">Motor Details:</label>
+      <input id="motorDetails" type="number" formControlName="motorDetails" readonly>
+    </div>
+    
+    <hr>
+    
+    <div>
+      <label for="propellerCode">Propeller:</label>
+      <select id="propellerCode" formControlName="propellerCode" class="form-control">
+        <option *ngFor="let item of productLookups?.propellerLookupItems" [value]="item.code">{{ item.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="propellerDetails">Propeller Details:</label>
+      <input id="propellerDetails" type="text" formControlName="propellerDetails" readonly>
+    </div>
+    
+    <hr>
+    
+    <div>
+      <label for="fcCode">Flight Controller:</label>
+      <select id="fcCode" formControlName="fcCode" class="form-control">
+        <option *ngFor="let item of productLookups?.fcLookupItems" [value]="item.code">{{ item.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="fcDetails">Flight Controller Details:</label>
+      <input id="fcDetails" type="text" formControlName="fcDetails" readonly>
+    </div>
+    
+    <hr>
+    
+    <div>
+      <label for="batteryCode">Battery:</label>
+      <select id="batteryCode" formControlName="batteryCode" class="form-control">
+        <option *ngFor="let item of productLookups?.batteryLookupItems" [value]="item.code">{{ item.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="batteryDetails">Battery Details:</label>
+      <input id="batteryDetails" type="text" formControlName="batteryDetails" readonly>
+    </div>
+    
+    <hr>
+    
+    <button class="btn btn-primary" type="button" (click)="clickAnalysis()">Analysis</button>
+</form>

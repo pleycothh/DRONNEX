@@ -1,0 +1,22 @@
+.form-container {
+    color: var(--text-color); 
+  }
+  
+  label {
+    color: var(--text-color); 
+  }
+  
+  input, select, p {
+    color: var(--text-color); 
+  }
+  
+  .card-body {
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  .card-img-top {
+    width: 100%; /* Ensure the image takes up the full width of the card body */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image is displayed as a block element */
+  }

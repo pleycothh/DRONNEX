@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="form-group">
+    <h4 class="mb-3">Contact From</h4>
+    <form class="needs-validation" novalidate>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid Name is required.
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Company</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid Company is required.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Purpose of contact</label>
+          <select class="form-select" id="country" required>
+            <option value="">Choose...</option>
+            <option>Software Service</option>
+            <option>Drone Service</option>
+            <option>Other Service</option>
+            <option>Carrer</option>
+
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="zip" class="form-label">Zip (Optional)</label>
+          <input type="text" class="form-control" id="zip" placeholder="" required>
+          <div class="invalid-feedback">
+            Zip code required.
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="same-address">
+        <label class="form-check-label" for="same-address">
+            I wish to receive news and updates from Simple FPV
+        </label>
+      </div>
+
+      <button class="w-100 btn btn-secondary btn-lg" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

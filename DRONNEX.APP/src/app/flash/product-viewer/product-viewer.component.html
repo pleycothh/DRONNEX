@@ -1,0 +1,96 @@
+<h3> Viewer</h3>
+
+<div class="viewer-container">
+  <div class="top-blocks">
+    <div class="block">
+      <h3>Physics</h3>
+      <table class="table" *ngIf="productResult">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Factor</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Hover</td>
+            <td>{{productResult.hoverTime}}(s)</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Speed</td>
+            <td>{{productResult.maxSpeed}}(m/s)</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Payload</td>
+            <td>{{productResult.maxPayload}}(g)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="block">
+      <h3>Power Unit</h3>
+      <table class="table" *ngIf="productResult">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Factor</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Hover</td>
+            <td>{{productResult.hoverTime}}(s)</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Speed</td>
+            <td>{{productResult.maxSpeed}}(m/s)</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Payload</td>
+            <td>{{productResult.maxPayload}}(g)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="block">
+      <h3>Ability</h3>
+      <table class="table" *ngIf="productResult">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Factor</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Hover</td>
+            <td>{{productResult.hoverTime}}(s)</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Speed</td>
+            <td>{{productResult.maxSpeed}}(m/s)</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Payload</td>
+            <td>{{productResult.maxPayload}}(g)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="main-div">
+    <div #chart></div> <!-- Add a div for the D3 chart -->
+  </div>
+</div>

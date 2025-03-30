@@ -1,0 +1,36 @@
+<p>reactive-form-doc works!</p>
+<form [formGroup]="profileForm">
+    <div>
+      <label for="firstName">First Name: </label>
+      <input id="firstName" type="text" formControlName="firstName">
+    </div>
+    <div>
+      <label for="lastName">Last Name: </label>
+      <input id="lastName" type="text" formControlName="lastName">
+    </div>
+    <div formGroupName="address">
+      <h2>Address</h2>
+      <label for="street">Street: </label>
+      <input id="street" type="text" formControlName="street">
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city">
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state">
+      <label for="zip">Zip Code: </label>
+      <input id="zip" type="text" formControlName="zip">
+    </div>
+
+    <p>Form Status: {{ profileForm.status }}</p>
+    <button type="button" (click)="updateProfile()">Update Profile</button>
+
+    <hr>
+    <div formArrayName="aliases">
+        <h2>Aliases</h2>
+        <button type="button" (click)="addAlias()">+ Add another alias</button>
+        <div *ngFor="let alias of aliases.controls; let i=index">
+          <!-- The repeated alias template -->
+          <label for="alias-{{ i }}">Alias:</label>
+          <input id="alias-{{ i }}" type="text" [formControlName]="i">
+        </div>
+      </div>
+  </form>

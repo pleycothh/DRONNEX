@@ -1,0 +1,11 @@
+.form-container {
+  color: var(--text-color); 
+}
+
+label {
+  color: var(--text-color); 
+}
+
+input, select, p {
+  color: var(--text-color); 
+}

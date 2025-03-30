@@ -1,0 +1,26 @@
+.form-container {
+    color: var(--text-color); 
+  }
+  
+  label {
+    color: var(--text-color); 
+  }
+  
+  input, select, p {
+    color: var(--text-color); 
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem; /* Add space between cards */
+  }
+  
+  .card {
+    margin-bottom: 1rem; /* Add bottom margin for spacing between rows */
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
