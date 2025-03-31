@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\z-code\\DRONNEX\\DRONNEX\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3937C1A8-CBF0-4CBB-B258-D94DEA57885F}|DRONNEX.API\\DRONNEX.API.csproj|c:\\z-code\\dronnex\\dronnex\\dronnex.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3937C1A8-CBF0-4CBB-B258-D94DEA57885F}|DRONNEX.API\\DRONNEX.API.csproj|solutionrelative:dronnex.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3937C1A8-CBF0-4CBB-B258-D94DEA57885F}|DRONNEX.API\\DRONNEX.API.csproj|c:\\z-code\\dronnex\\dronnex\\dronnex.api\\dronnex.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3937C1A8-CBF0-4CBB-B258-D94DEA57885F}|DRONNEX.API\\DRONNEX.API.csproj|solutionrelative:dronnex.api\\dronnex.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 128,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DRONNEX.API.csproj",
+              "DocumentMoniker": "C:\\z-code\\DRONNEX\\DRONNEX\\DRONNEX.API\\DRONNEX.API.csproj",
+              "RelativeDocumentMoniker": "DRONNEX.API\\DRONNEX.API.csproj",
+              "ToolTip": "C:\\z-code\\DRONNEX\\DRONNEX\\DRONNEX.API\\DRONNEX.API.csproj",
+              "RelativeToolTip": "DRONNEX.API\\DRONNEX.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-31T11:59:13.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\z-code\\DRONNEX\\DRONNEX\\DRONNEX.API\\Program.cs",
+              "RelativeDocumentMoniker": "DRONNEX.API\\Program.cs",
+              "ToolTip": "C:\\z-code\\DRONNEX\\DRONNEX\\DRONNEX.API\\Program.cs",
+              "RelativeToolTip": "DRONNEX.API\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T11:57:58.569Z",
+              "EditorCaption": ""
             }
           ]
         }
