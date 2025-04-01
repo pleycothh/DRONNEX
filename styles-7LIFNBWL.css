@@ -1,1 +1,0 @@
-:root{--text-color-light: #282828;--text-color-dark: #dedede}[data-bs-theme=light]{--text-color: var(--text-color-light)}[data-bs-theme=dark]{--text-color: var(--text-color-dark)}
