@@ -54,7 +54,6 @@ obj/
 *.pdb
 *.cache
 *.log
-*.app
 *.db
 publish/
 artifacts/

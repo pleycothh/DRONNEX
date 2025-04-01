@@ -33,6 +33,12 @@
     margin-top: 1em;
     margin-left: 3em;
 
+    &.disabled {
+      pointer-events: none; // Disable interaction
+      opacity: 0.6; // Reduce opacity for visual feedback
+      cursor: not-allowed; // Show "not-allowed" cursor
+    }
+    
     .nav-link {
       color: var(--text-color); // Use CSS variable for text color
       text-decoration: none;

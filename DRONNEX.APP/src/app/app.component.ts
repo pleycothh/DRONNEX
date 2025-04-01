@@ -26,6 +26,6 @@ export class AppComponent {
   constructor(
     private titleService: Title) {
 
-    this.titleService.setTitle("fpv")
+    this.titleService.setTitle("Dronnex")
   }
 }

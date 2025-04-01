@@ -1,0 +1,77 @@
+<div class="container mt-4">
+  <h3>Calculator</h3>
+
+  <!-- Buttons -->
+  <div class="d-flex justify-content-end mb-3">
+    <button id="calcButton" class="btn btn-primary me-2" (click)="calc()">Calc</button>
+    <button id="saveButton" class="btn btn-success" (click)="save()">Save</button>
+  </div>
+
+  <!-- Inline Form -->
+  <form class="row g-3 align-items-center">
+    <!-- Name Input -->
+    <div class="col-auto">
+      <label for="name" class="form-label visually-hidden">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="toolEntity.name" name="name" />
+    </div>
+
+    <!-- Value One Input -->
+    <div class="col-auto">
+      <label for="valueOne" class="form-label visually-hidden">Value One</label>
+      <input type="number" class="form-control" id="valueOne" placeholder="Value One" [(ngModel)]="toolEntity.valueOne" name="valueOne" />
+    </div>
+
+    <!-- Operator Dropdown -->
+    <div class="col-auto">
+      <label for="operator" class="form-label visually-hidden">Operator</label>
+      <select class="form-select" id="operator" [(ngModel)]="toolEntity.operator" name="operator">
+        <option value=1>+</option>
+        <option value=2>-</option>
+        <option value=3>*</option>
+        <option value=4>/</option>
+      </select>
+    </div>
+
+    <!-- Value Two Input -->
+    <div class="col-auto">
+      <label for="valueTwo" class="form-label visually-hidden">Value Two</label>
+      <input type="number" class="form-control" id="valueTwo" placeholder="Value Two" [(ngModel)]="toolEntity.valueTwo" name="valueTwo" />
+    </div>
+
+    <!-- Equals Sign -->
+    <div class="col-auto">
+      <span class="form-control-plaintext">=</span>
+    </div>
+
+    <!-- Result -->
+    <div class="col-auto">
+      <label for="result" class="form-label visually-hidden">Result</label>
+      <input type="number" class="form-control" id="result" placeholder="Result" [(ngModel)]="toolResult.value" name="result" readonly />
+    </div>
+  </form>
+  <br />
+  <hr />
+
+  <!-- Table -->
+  <div class="mt-4">
+    <h3>Results Table</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Result</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of toolRow; let i = index">
+          <td>{{ row.toolEntity.name }}</td>
+          <td>{{ row.toolResult.value }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="delete(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
