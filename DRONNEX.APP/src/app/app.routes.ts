@@ -12,8 +12,8 @@ export const routes: Routes = [
       path: '',
       //component: FlashComponent,
       children: [
-        { path: '', redirectTo: 'tool', pathMatch: 'full' },
-        { path: 'home', component: HomeComponent },
+        { path: '', redirectTo: 'home', pathMatch: 'full' },
+        { path: 'home', component: ToolComponent },
         { path: 'tool', component: ToolComponent },
        // { path: 'flash', component: FlashComponent },
         { path: 'print', component: PrintComponent },
