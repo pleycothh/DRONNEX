@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --output-path docs --base-href \"/\" && npx angular-cli-ghpages --dir=docs/browser --branch=gh-pages"
+    "deploy": "ng build --output-path docs --base-href \"/\" && npx angular-cli-ghpages --dir=docs/browser --branch=gh-pages --cname=www.dronnex.com"
   },
   "private": true,
   "dependencies": {
