@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
 }

@@ -6,18 +6,20 @@ import { DetailedPrintComponent } from './print/detailed-print/detailed-print.co
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ToolComponent } from './tool/tool.component';
+import { DetailedBlogComponent } from './blog/detailed-blog/detailed-blog.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProjectComponent } from './project/project.component';
 
 export const routes: Routes = [
     {
       path: '',
-      //component: FlashComponent,
       children: [
         { path: '', redirectTo: 'home', pathMatch: 'full' },
-        { path: 'home', component: ToolComponent },
+        { path: 'home', component: HomeComponent },
         { path: 'tool', component: ToolComponent },
-       // { path: 'flash', component: FlashComponent },
-        { path: 'print', component: PrintComponent },
-        { path: 'print/detail/:id', component: DetailedPrintComponent },
+        { path: 'project', component: ProjectComponent },
+        { path: 'blog', component: BlogComponent },
+        { path: 'blog/detail/:id', component: DetailedBlogComponent },
         { path: 'contact', component: ContactComponent },
 
       
