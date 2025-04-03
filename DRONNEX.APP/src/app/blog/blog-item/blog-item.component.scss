@@ -1,0 +1,16 @@
+/* Add background color to the divider */
+.divider {
+    height: 2px;
+    background-color: lightgray; /* Blue color */
+  }
+
+  /* Add hover effect for the container */
+.hover-container {
+    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #f8f9fa; /* Default background color */
+  }
+  
+  .hover-container:hover {
+    background-color: #e9ecef; /* Background color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+  }

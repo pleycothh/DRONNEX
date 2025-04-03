@@ -1,7 +1,7 @@
 
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { BaseWebConnection } from './base-web-connection';
-import { Observable, map } from 'rxjs';
+import { Observable, map, throwError } from 'rxjs';
 
 export abstract class BaseHttp extends BaseWebConnection {
     /**
@@ -37,7 +37,21 @@ export abstract class BaseHttp extends BaseWebConnection {
         }
     }
 
-
+    // Error handling
+    public handleError(error: HttpErrorResponse) {
+        if (typeof ErrorEvent !== 'undefined' && error.error instanceof ErrorEvent) {
+          // A client-side or network error occurred.
+          console.error('An error occurred:', error.error.message);
+        } else {
+          // The backend returned an unsuccessful response code.
+          console.error(
+            `Backend returned code ${error.status}, ` +
+            `body was: ${error.error}`);
+        }
+        // Return an observable with a user-facing error message.
+        return throwError(
+          'Something bad happened; please try again later.');
+      }
 
 }
 export interface BlobFile {

@@ -1,1 +1,8 @@
-<app-detailed-blog></app-detailed-blog>
+
+<div class="row">
+    <div *ngFor="let item of items">
+    <app-blog-item
+        [item]="item"
+        (click)="GetDetail(item.id)">
+    </app-blog-item>
+</div>
