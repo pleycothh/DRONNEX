@@ -3,12 +3,18 @@
 :root {
     --text-color-light: #282828;
     --text-color-dark: #dedede; 
+
+    --nav-bg-light: #f8f9fa; /* Light mode background */
+    --nav-bg-dark: #343a40; /* Dark mode background */
   }
+
   
   [data-bs-theme='light'] {
     --text-color: var(--text-color-light);
+    --nav-bg: var(--nav-bg-light); /* Light mode background */
   }
   
   [data-bs-theme='dark'] {
     --text-color: var(--text-color-dark);
+    --nav-bg: var(--nav-bg-dark); /* Dark mode background */
   }

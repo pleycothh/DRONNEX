@@ -16,10 +16,14 @@ export const routes: Routes = [
       children: [
         { path: '', redirectTo: 'home', pathMatch: 'full' },
         { path: 'home', component: HomeComponent },
+
         { path: 'tool', component: ToolComponent },
+
         { path: 'project', component: ProjectComponent },
+
         { path: 'blog', component: BlogComponent },
         { path: 'blog/detail/:id', component: DetailedBlogComponent },
+
         { path: 'contact', component: ContactComponent },
 
       

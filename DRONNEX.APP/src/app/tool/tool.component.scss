@@ -1,29 +1,19 @@
-table.disabled {
-    pointer-events: none;
-    opacity: 0.6;
-  }
+.container-fluid {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: row; /* Arrange children horizontally */
+  height: 100vh; /* Full viewport height */
+}
 
-  
+.sidebar {
+  background-color: var(--nav-bg); /* Use dynamic background color */
+  color: var(--text-color); /* Use dynamic text color */
+  padding: 1rem;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  border-right: 1px solid rgba(0, 0, 0, 0.1); /* Optional border for separation */
+}
 
-/* Table styles */
-.table {
-    background-color: var(--table-bg);
-    color: var(--text-color);
-    border-color: var(--table-border);
-  
-    th, td {
-      border-color: var(--table-border);
-    }
-  
-    thead {
-      background-color: var(--table-border); /* Slightly darker for header */
-    }
-  
-    tbody tr:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
-    }
-  }
-
-  h3 {
-    color: var(--text-color);
-  }
+.main-content {
+  flex: 1; /* Take up the remaining space */
+  padding: 1rem;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}

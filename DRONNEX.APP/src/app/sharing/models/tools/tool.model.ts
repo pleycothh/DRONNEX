@@ -30,3 +30,9 @@ export enum ResponseCode {
     success = 2,
     timeout = 3
 }
+
+export enum ToolType {
+    PreFlightCalculator = 'pfc',
+    LiveFlightMonitor = 'lfm',
+    ImageAnalyzer = 'ia'
+}

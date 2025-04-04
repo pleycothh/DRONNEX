@@ -1,0 +1,23 @@
+.nav-link {
+    color: var(--text-color); /* Use dynamic text color */
+    text-decoration: none;
+    display: block; /* Make the link take up the full width */
+    width: 100%; /* Ensure the link spans the full width of the container */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+      color: #007bff; /* Highlight color */
+    }
+  
+    &.active {
+      font-weight: bold;
+      color: #007bff; /* Active link color */
+      background-color: rgba(0, 0, 0, 0.1); /* Highlight background */
+    }
+  }
+  
+  .nav-item {
+    width: 100%; /* Ensure the parent container spans the full width */
+  }

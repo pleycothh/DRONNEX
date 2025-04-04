@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  constructor(private router: Router) {}
+
+  redirectToBlog(index: number): void {
+    this.router.navigate(['/blog/detail', index]); // Navigate to the blog page with the given index
+  }
+
 
 }

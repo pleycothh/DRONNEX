@@ -1,0 +1,33 @@
+<nav class="sidebar">
+    <div class="position-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="selectedTool === toolType.PreFlightCalculator"
+            (click)="selectTool(toolType.PreFlightCalculator)"
+          >
+            Pre-Flight Calculator
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="selectedTool === toolType.LiveFlightMonitor"
+            (click)="selectTool(toolType.LiveFlightMonitor)"
+          >
+            Live Flight Monitor
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="selectedTool === toolType.ImageAnalyzer"
+            (click)="selectTool(toolType.ImageAnalyzer)"
+          >
+            Image Analyzer
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
