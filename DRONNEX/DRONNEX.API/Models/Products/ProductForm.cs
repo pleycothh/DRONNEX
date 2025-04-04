@@ -1,4 +1,4 @@
-namespace DRONNEX.API.Models
+namespace DRONNEX.API.Models.Products
 {
   public class ProductForm
   {

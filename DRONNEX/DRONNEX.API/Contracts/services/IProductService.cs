@@ -1,6 +1,6 @@
-using DRONNEX.API.Models;
+using DRONNEX.API.Models.Products;
 
-namespace DRONNEX.API.Contracts
+namespace DRONNEX.API.Contracts.services
 {
     public interface IProductService
     {

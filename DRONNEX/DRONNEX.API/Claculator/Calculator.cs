@@ -1,5 +1,5 @@
 using DRONNEX.API.Contracts;
-using DRONNEX.API.Models;
+using DRONNEX.API.Models.Products;
 
 namespace DRONNEX.API.Claculator
 {

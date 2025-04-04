@@ -1,6 +1,6 @@
 ﻿using DRONNEX.API.Models;
 
-namespace DRONNEX.API.Contracts
+namespace DRONNEX.API.Contracts.repositories
 {
     public interface IProductRepository
     {

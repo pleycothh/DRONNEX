@@ -1,6 +1,8 @@
 
 using DRONNEX.API.Contracts;
-using DRONNEX.API.Models;
+using DRONNEX.API.Contracts.repositories;
+using DRONNEX.API.Contracts.services;
+using DRONNEX.API.Models.Products;
 
 namespace DRONNEX.API.Services
 {

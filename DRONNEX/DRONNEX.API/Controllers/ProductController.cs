@@ -1,5 +1,5 @@
-using DRONNEX.API.Contracts;
-using DRONNEX.API.Models;
+using DRONNEX.API.Contracts.services;
+using DRONNEX.API.Models.Products;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

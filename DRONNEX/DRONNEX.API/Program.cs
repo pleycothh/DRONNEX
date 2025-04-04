@@ -3,6 +3,8 @@
 
 using DRONNEX.API.Claculator;
 using DRONNEX.API.Contracts;
+using DRONNEX.API.Contracts.repositories;
+using DRONNEX.API.Contracts.services;
 using DRONNEX.API.Data;
 using DRONNEX.API.Meta;
 using DRONNEX.API.Repository;
@@ -61,12 +63,15 @@ namespace DRONNEX.API
             // Ef core
 
 
-            // register service
+            /// ==================  registe Repositories =====================
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
-            //
-            //   builder.Services.AddScoped<IUserService, UserService>();
-            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 
+            /// ==================  registe Services =====================
+            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IBlogService, BlogService>();
+
+            /// ==================  register Others =====================
             builder.Services.AddScoped<IMetaProvider, MetaProvider>();
 
             builder.Services.AddScoped<ICalculator, Calculator>();
