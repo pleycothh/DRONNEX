@@ -15,25 +15,25 @@ export class BlogComponent {
 
     items: BlogItemEntity[] = [
       {
-        id: '123',
-        header: 'How I Trained My Own YOLO Model for Trees',
+        id: '123e4567-e89b-12d3-a456-426614174000',
+        header: 'Onboard Computers in Drones',
         explanation: 'A step-by-step guide on training a custom YOLO model to detect trees using drone imagery.',
         imageUrl: 'assets/blog-yolo-trees.jpg'
       },
       {
-        id: '124',
+        id: 'e3f2c1a4-5b6d-4c8e-9f7a-123456789abc',
         header: 'Wiring Raspberry Pi to Pixhawk',
         explanation: 'Learn how to connect a Raspberry Pi to a Pixhawk flight controller for advanced drone control.',
         imageUrl: 'assets/blog-pi-pixhawk.jpg'
       },
       {
-        id: '24242',
+        id: 'e3f2c1a4-5b6d-4c8e-9f7a-123456789abc',
         header: 'Why I Chose ArduPilot Over PX4',
         explanation: 'A detailed comparison of ArduPilot and PX4, and why I chose ArduPilot for my drone projects.',
         imageUrl: 'assets/blog-ardupilot.jpg'
       },
       {
-        id: '1241241',
+        id: 'e3f2c1a4-5b6d-4c8e-9f7a-123456789abc',
         header: 'Onboard Computers in Drones: Industry Use Cases and Applications',
         explanation: 'Explore how onboard computers are transforming drones across agriculture, surveillance, delivery, inspection, and industrial applications.',
         imageUrl: 'assets/blog-ardupilot.jpg'

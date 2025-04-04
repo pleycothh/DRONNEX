@@ -1,8 +1,13 @@
 
+export interface BlogEntity {
+    id: string; // Corresponds to Guid in C#
+    title: string;
+    sections: BlogSection[];
+    footer: string;
+}
 
-export interface BlogDetailEntity {
-    id: string;
-    item: BlogItemEntity;
+export interface BlogSection {
+    heading: string;
     content: string;
 }
 

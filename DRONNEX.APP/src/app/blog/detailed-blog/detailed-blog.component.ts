@@ -1,29 +1,35 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common'; // Import Location service
+import { CommonModule, Location } from '@angular/common'; // Import Location service
 import { HttpClient } from '@angular/common/http';
+import { BlogEntity } from '../../sharing/models/blog/blog.model';
+import { BlogService } from '../blog.service';
 
 @Component({
   selector: 'app-detailed-blog',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './detailed-blog.component.html',
   styleUrls: ['./detailed-blog.component.scss']
 })
 export class DetailedBlogComponent implements OnInit, OnChanges{
   id: string; // Property to store the index
-  blogData: any;
+  blogData: BlogEntity;;
 
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute, 
-    private location: Location) {} // Inject Location service
+    private location: Location,
+    private bs: BlogService) {} // Inject Location service
 
   ngOnInit(): void {
     this.id = String(this.route.snapshot.paramMap.get('id'));
-    this.http.get('/api/blog/123').subscribe((data) => {
-      this.blogData = data;
-    });  }
+    this.bs.getBlogDetail(this.id).subscribe((data: BlogEntity) => {
+      this.blogData = data; // Assign the blog data to the property
+    });
+  console.log(this.blogData); // Log the blog data to the console
+
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     

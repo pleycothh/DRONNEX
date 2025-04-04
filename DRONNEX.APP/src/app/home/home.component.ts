@@ -12,7 +12,7 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
-  redirectToBlog(index: number): void {
+  redirectToBlog(index: string): void {
     this.router.navigate(['/blog/detail', index]); // Navigate to the blog page with the given index
   }
 

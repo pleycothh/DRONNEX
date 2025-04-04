@@ -45,10 +45,10 @@ namespace DRONNEX.API
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   policy =>
                                   {
-                                      policy.AllowAnyOrigin()
-                                      //policy.WithOrigins("http://localhost:4200",
-                                      //  "http://localhost:4200/",
-                                      //  "http://localhost:4200/flash")
+                                      policy.AllowAnyOrigin();
+                                      policy.WithOrigins("http://localhost:4200",
+                                       "http://localhost:4200/",
+                                       "http://localhost:4200/blog")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod();
                                   });

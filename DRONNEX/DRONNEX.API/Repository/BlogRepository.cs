@@ -26,17 +26,37 @@ namespace DRONNEX.API.Repository
                         new BlogSection
                         {
                             Heading = "Agriculture (Precision Farming)",
-                            Content = "<p>Agriculture was an early adopter of drone technology for monitoring crops and automating fieldwork...</p><p>Real-Time Weed Detection & Spraying: Drones equipped with AI vision can distinguish weeds from crops in real time and actuate spot-spraying...</p><p>Crop Health Monitoring: Onboard computers process multispectral or RGB images to assess crop health indicators (NDVI, pigment indices) during flight...</p><p>Autonomous Field Navigation: Farmland drones often fly beyond visual line of sight, so onboard processors handle path planning and obstacle avoidance...</p><p>Variable-Rate Application: By merging sensor data and GPS maps, an onboard computer can control the variable release of seeds, water, or fertilizer...</p>"
+                            Content = "<p>Agriculture was an early adopter of drone technology for monitoring crops and automating fieldwork. Today, many precision farming drones carry onboard computers to analyze sensor data and make split-second decisions in the field...</p>"
                         },
                         new BlogSection
                         {
                             Heading = "Surveillance and Security",
-                            Content = "<p>In surveillance, security, and public safety applications, drones act as mobile observers – often tasked with detecting intruders, monitoring crowds, or securing perimeters...</p><p>Perimeter Intrusion Detection: Drones can autonomously patrol fences or borders using onboard vision to detect humans, vehicles, or boats entering restricted zones...</p><p>Crowd Monitoring and Anomaly Detection: Law enforcement or event security drones monitor large gatherings for public safety...</p><p>Follow and Track Missions: In police or military operations, a drone may be tasked to follow a target vehicle or person semi-autonomously...</p><p>Non-Visual Sensors for Security: Although vision is primary, some security drones use other onboard sensor processing...</p>"
+                            Content = "<p>In surveillance, security, and public safety applications, drones act as mobile observers – often tasked with detecting intruders, monitoring crowds, or securing perimeters...</p>"
+                        },
+                        new BlogSection
+                        {
+                            Heading = "Delivery and Logistics",
+                            Content = "<p>Drone delivery – transporting packages by air – presents another major industry segment benefiting from onboard computers. In a delivery scenario, an unmanned aircraft must navigate from a distribution center to a customer’s location, then execute a safe drop-off or landing, all with minimal human oversight...</p>"
+                        },
+                        new BlogSection
+                        {
+                            Heading = "Mapping and Inspection",
+                            Content = "<p>One of the most widespread drone applications is aerial mapping and infrastructure inspection. This spans use cases like land surveying (creating orthomosaic maps and 3D terrain models), inspecting bridges, wind turbines, power lines, solar farms, and more...</p>"
+                        },
+                        new BlogSection
+                        {
+                            Heading = "Industrial Applications (Warehousing, Manufacturing, and Beyond)",
+                            Content = "<p>Beyond the well-defined sectors above, onboard computers in drones are also driving innovative use cases in general industrial and enterprise environments. These include warehouse inventory drones, drones in manufacturing or chemical plants for monitoring, and other specialty uses like mining or oil-and-gas inspections that don’t squarely fall under “mapping” or “security.”...</p>"
+                        },
+                        new BlogSection
+                        {
+                            Heading = "Conclusion and Comparative Overview",
+                            Content = "<p>From the above, it’s evident that onboard computers have become a fundamental enabling technology for drones in virtually every industry. They allow drones to go from remote-controlled cameras in the sky to truly autonomous robots that can interpret and interact with their environment...</p>"
                         }
                     },
                     Footer = "&copy; 2025 DRONNEX. All rights reserved."
                 },
-                                new BlogEntity
+                new BlogEntity
                 {
                     Id = new Guid("e3f2c1a4-5b6d-4c8e-9f7a-123456789abc"),
                     Title = "Onboard Computers in Drones 2",

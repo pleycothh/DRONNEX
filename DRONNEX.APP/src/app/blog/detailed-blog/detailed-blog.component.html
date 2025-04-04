@@ -1,15 +1,21 @@
-<div class="container mt-5">
+<div class="container mt-5" *ngIf="blogData; else loading">
   <div class="text-end mt-4">
     <button class="btn btn-secondary" (click)="goBack()">Back</button>
   </div>
   <div>
-    <h1>{{ blogData?.title }}</h1>
+    <h1>{{ blogData.title }}</h1>
   </div>
 
-  <div *ngFor="let section of blogData?.sections">
+  <div *ngFor="let section of blogData.sections">
     <h2>{{ section.heading }}</h2>
     <div [innerHTML]="section.content"></div>
   </div>
 
-  <footer class="text-muted text-center mt-5" [innerHTML]="blogData?.footer"></footer>
+  <footer class="text-muted text-center mt-5" [innerHTML]="blogData.footer"></footer>
 </div>
+
+<ng-template #loading>
+  <div class="text-center mt-5">
+    <p>Loading...</p>
+  </div>
+</ng-template>
