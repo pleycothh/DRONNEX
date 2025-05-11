@@ -46,9 +46,13 @@ namespace DRONNEX.API
                                   policy =>
                                   {
                                       policy.AllowAnyOrigin();
-                                      policy.WithOrigins("http://localhost:4200",
+                                      policy.WithOrigins(
+                                          "http://localhost:4200",
                                        "http://localhost:4200/",
-                                       "http://localhost:4200/blog")
+                                       "http://localhost:4200/blog",
+                                        "https://www.dronnex.com",
+                                         "https://www.dronnex.com/",
+                                         "https://www.dronnex.com/blog")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod();
                                   });
