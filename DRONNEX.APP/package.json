@@ -1,14 +1,20 @@
 {
   "name": "dronnex.app",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "deploy": "ng build --output-path docs --base-href \"/\" && npx angular-cli-ghpages --dir=docs/browser --branch=gh-pages --cname=www.dronnex.com"
+"scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+
+  "build:ng": "ng build --configuration=production --output-path dist/dronnex.app --base-href \"/\"",
+  "build:docs": "cd docs-site && npm install && npm run build && cd ..",
+  "copy:docs": "xcopy /E /I /Y docs-site\\build\\* dist\\dronnex.app\\browser\\doc",
+  "build:all": "npm run build:ng && npm run build:docs && npm run copy:docs",
+  "deploy": "npm run build:all && npx angular-cli-ghpages --dir=dist/dronnex.app/browser --branch=gh-pages --cname=www.dronnex.com"
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
