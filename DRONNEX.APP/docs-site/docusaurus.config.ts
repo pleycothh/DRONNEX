@@ -5,15 +5,15 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Dronnex',
+  tagline: 'Projects | Documentations | Blogs',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://www.dronnex.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/doc/',
+  baseUrl: '/doc',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -68,21 +68,33 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Dronnex',
       logo: {
-        alt: 'My Site Logo',
+        alt: '',
         src: 'img/logo.svg',
       },
       items: [
+        // left side
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          to: '/blog', 
+          label: 'Blog', 
+          position: 'left'
+        },
+
+        // right side
+        {
+          href: 'https://www.dronnex.com',
+          label: 'Back to Dronnex',
+          position: 'right'
+        },
+        {
+          href: 'https://github.com/pleycothh/DRONNEX',
           label: 'GitHub',
           position: 'right',
         },
@@ -131,7 +143,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Dronnex, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

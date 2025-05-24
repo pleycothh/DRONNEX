@@ -28,3 +28,8 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Move the whole navbar content to the right by 4em */
+.navbar__inner {
+  margin-left: 5em;
+}

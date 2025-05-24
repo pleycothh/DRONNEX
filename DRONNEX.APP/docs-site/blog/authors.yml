@@ -1,18 +1,18 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+ben:
+  name: Ben Li
+  title: Software engineer
+  url: https://github.com/pleycothh
+  image_url: https://github.com/pleycothh.png
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    x: dronnex
+    github: pleycothh
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+chatgpt:
+  name: Chat GPT
+  title: AI Assistant
+  url: https://openai.com
+  image_url: https://openai.com/favicon.ico
   page:
     # customize the url of the author page at /blog/authors/<permalink>
     permalink: '/all-sebastien-lorber-articles'

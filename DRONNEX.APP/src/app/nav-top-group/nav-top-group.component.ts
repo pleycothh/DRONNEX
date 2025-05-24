@@ -16,7 +16,7 @@ import { environment } from '../../environments/environment';
 export class NavTopGroupComponent {
   darkModeService: DarkModeService = inject(DarkModeService);
   selectedIcon: string = 'moon'; // Default selected icon
-  docsUrl = environment.docsUrl;
+  docsUrl = environment.docuUrl;// + '/docs/intro';
 
 constructor() { }
 //darkModeService.darkModeService

@@ -1,75 +1,98 @@
 .header-container {
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #ccc; /* Gray color for the line */
-
-  color: var(--text-color); // Use CSS variable for text color
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  border-bottom: 2px solid var(--nav-border);
+  padding: 0 2rem;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-content {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between; // Ensure content is spaced between
+  justify-content: space-between;
 }
 
 .brand-link {
   display: flex;
   align-items: center;
-  color: var(--text-color); // Use CSS variable for text color
+  color: var(--primary-text);
+  font-weight: bold;
+  font-size: 1.3rem;
   text-decoration: none;
-  margin-right: auto; // Align brand link to the left
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: var(--primary-text);
+  text-decoration: none;
+  font-size: 1em;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, font-weight 0.2s;
+
+  &:hover,
+  &:focus {
+    background: #2e8555; // Green background on hover
+    color: #2e8555;         // White text on hover
+    font-weight: bold;
+  }
+
+  &.active,
+  &:active {
+    background: #2e8555; // Green background when active/clicked
+    color: #fff;         // White text
+    font-weight: bold;   // Bold font
+  }
 }
 
 .nav-list {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start; // Align to the left
+  align-items: center;
   margin: 0;
-  padding: 0;
+  flex: 0 1 auto;
   list-style: none;
+  justify-content: flex-start;
 
   li {
-    margin-right: 1em;
-    margin-top: 1em;
-    margin-left: 3em;
+    margin: 0 0em;
 
     &.disabled {
-      pointer-events: none; // Disable interaction
-      opacity: 0.6; // Reduce opacity for visual feedback
-      cursor: not-allowed; // Show "not-allowed" cursor
+      pointer-events: none;
+      opacity: 0.6;
+      cursor: not-allowed;
     }
-    
-    .nav-link {
-      color: var(--text-color); // Use CSS variable for text color
-      text-decoration: none;
-      font-size: 1em; // Increase text size
-      padding-inline: 2em;
 
-      svg {
-        display: block;
-        margin: 0 auto 0.25rem;
-        width: 24px;
-        height: 24px;
+    .nav-link {
+      color: var(--primary-text);
+      text-decoration: none;
+      font-size: 1em;
+      padding: 0.5em 1.2em;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+
+      &:hover,
+      &:focus {
+        background: var(--nav-link-hover-bg);
+        color: var(--nav-link-hover-text);
+      }
+      &.active {
+        background: var(--nav-link-active-bg);
+        color: var(--nav-link-hover-text);
       }
     }
   }
 }
 
-.dark-mode {
-  display: flex;
-  align-items: center;
-
-  svg {
-    display: block;
-    margin: 0 auto 0.25rem;
-    width: 20px;
-    height: 20px;
-  }
-}
-
 .theme-toggle svg {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s;
   cursor: pointer;
+  fill: var(--primary-text);
 }
 
 .theme-toggle svg:hover {
