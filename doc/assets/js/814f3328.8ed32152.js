@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_site=self.webpackChunkdocs_site||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Human Body vs. Humanoid Robot Design","permalink":"/doc/blog/hbhrd","unlisted":false,"date":"2025-05-24T00:00:00.000Z"}]}')}}]);
