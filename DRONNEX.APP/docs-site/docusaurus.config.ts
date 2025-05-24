@@ -108,7 +108,11 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/category/tutorials',
+            },
+            {
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },
@@ -116,16 +120,16 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'LinkdIn',
+              href: 'https://www.linkedin.com/in/ben-zhuoheng-li/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Instagram',
+              href: 'https://www.instagram.com/dronnex.info/',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Youtube',
+              href: 'https://www.youtube.com/@Dronnex-info',
             },
           ],
         },
@@ -133,17 +137,17 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Docusaurus',
+              href: 'https://docusaurus.io/',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+              label: 'Berkeley Humanoid',
+              href: 'https://lite.berkeley-humanoid.org/'
+            }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Dronnex, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Dronnex-Doc, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

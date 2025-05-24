@@ -32,22 +32,23 @@
   color: var(--primary-text);
   text-decoration: none;
   font-size: 1em;
+  font-weight: 600;
   padding: 0.5em 1.2em;
   border-radius: 6px;
-  transition: background 0.2s, color 0.2s, font-weight 0.2s;
+  transition: background 0.2s, color 0.2s;
 
   &:hover,
   &:focus {
     background: #2e8555; // Green background on hover
-    color: #2e8555;         // White text on hover
-    font-weight: bold;
+    color: #fff;         // White text on hover
+    // font-weight: bold; // <-- Remove this line to avoid bold on hover
   }
 
   &.active,
   &:active {
     background: #2e8555; // Green background when active/clicked
     color: #fff;         // White text
-    font-weight: bold;   // Bold font
+    font-weight: bold;   // Bold font only when active/clicked
   }
 }
 

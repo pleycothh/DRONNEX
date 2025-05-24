@@ -3,9 +3,12 @@
 /* Padding below the footer and lighter body text */
 
 body {
+    background: var(--primary-bg);
+  color: var(--primary-text);
+  border-bottom: 2px solid var(--nav-border);
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: rgb(var(--bs-tertiary-color-rgb));
+  color: var(--primary-text);
 }
 
 .hover {
@@ -14,10 +17,9 @@ body {
 
 .hover:hover {
   transform: scale(1.05); /* Slightly enlarge the element */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  box-shadow: 0 8px 16px var(--block-hover-bg); /* Add a shadow effect */
   cursor: pointer; /* Change the cursor to indicate interactivity */
 }
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -45,12 +47,12 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.features .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 /* rtl:begin:ignore */
-.marketing .col-lg-4 p {
+.features .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
@@ -84,7 +86,13 @@ body {
   }
 
   .featurette-heading {
+    color: var(--primary-text);
     font-size: 50px;
+  }
+
+  .lead {
+    color: var(--primary-text);
+    font-size: 1.25rem;
   }
 }
 

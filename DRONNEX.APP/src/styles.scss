@@ -14,24 +14,30 @@
     --nav-link-hover-bg: #359962;
     --nav-link-hover-text: #fff;
     --nav-border: #277148;*/
+    --nav-link-hover-text: #2e8555;
+
   }
 
   
   [data-bs-theme='light'] {
     --text-color: var(--text-color-light);
     --nav-bg: var(--nav-bg-light); /* Light mode background */
+    --block-hover-bg: #5d5d5d; /* Dark mode hover background */
+
   }
   
   [data-bs-theme='dark'] {
     --text-color: var(--text-color-dark);
     --nav-bg: var(--nav-bg-dark); /* Dark mode background */
+    --block-hover-bg: #5d5d5d; /* Dark mode hover background */
+
 
 //    --primary-bg: #25c2a0;
  //   --primary-bg-dark: #21af90;
  //   --primary-bg-light: #29d5b0;
     --primary-text: #fff;
   //  --nav-link-active-bg: #1a8870;
- //   --nav-link-hover-bg: #32d8b4;
-    --nav-link-hover-text: #fff;
+   // --nav-link-hover-bg: #585757;
+    --nav-link-hover-text: #2e8555;
   //  --nav-border: #1fa588;
   }
