@@ -10,7 +10,18 @@
             Power Calculator
           </a>
         </li>
+
         <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="selectedTool === toolType.TodoList"
+            (click)="selectTool(toolType.TodoList)"
+          >
+            Todo List
+          </a>
+        </li>
+
+        <!--li class="nav-item">
           <a
             class="nav-link"
             [class.active]="selectedTool === toolType.LiveFlightMonitor"
@@ -27,7 +38,7 @@
           >
             ROS2 Controller
           </a>
-        </li>
+        </li-->
       </ul>
     </div>
   </nav>

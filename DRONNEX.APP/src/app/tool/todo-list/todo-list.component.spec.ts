@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReactiveFormDocComponent } from './reactive-form-doc.component';
+import { TodoListComponent } from './todo-list.component';
 
-describe('ReactiveFormDocComponent', () => {
-  let component: ReactiveFormDocComponent;
-  let fixture: ComponentFixture<ReactiveFormDocComponent>;
+describe('TodoListComponent', () => {
+  let component: TodoListComponent;
+  let fixture: ComponentFixture<TodoListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormDocComponent]
+      imports: [TodoListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ReactiveFormDocComponent);
+    fixture = TestBed.createComponent(TodoListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

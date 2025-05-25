@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,17 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
+    docsUrl = environment.docuUrl;// + '/docs/intro';  doc/blog/ccid
+
+    droneWithAIUrl = environment.docuUrl + '/docs/tutorial/yolo11n-rknn-rock5c'; 
+    vtolUrl = environment.docuUrl + '/docs/project/3d-printed-vtol'; // project/3d-printed-vtol
+    simpleFOCUrl = environment.docuUrl + '/docs/category/field-oriented-control-foc';
+    bee25Url = environment.docuUrl + '/docs/FPV/bee-25';
+    FpvUrl = environment.docuUrl + '/docs/category/fpv';
   constructor(private router: Router) {}
 
-  redirectToBlog(index: string): void {
-    this.router.navigate(['/blog/detail', index]); // Navigate to the blog page with the given index
+  redirectToUrl(url: string) {
+    window.location.href = url;
   }
 
 

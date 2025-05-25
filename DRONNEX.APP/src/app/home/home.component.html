@@ -13,7 +13,7 @@
           <h1>Drone with AI Ready</h1>
           <p class="opacity-75">Drone powered with on board computer</p>
           <p>
-            <a class="btn btn-lg btn-primary" (click)="redirectToBlog('123e4567-e89b-12d3-a456-426614174000')">Learn more</a>
+            <a [href]="droneWithAIUrl" class="btn btn-lg btn-primary">Learn more</a>
           </p>
         </div>
       </div>
@@ -27,8 +27,9 @@
             <h1>Aerial Photography</h1>
             <p>Special made Drone with Max 5 kg payload or lightweight camera near actor</p>
             <p>
-              <a class="btn btn-lg btn-primary" (click)="redirectToBlog('123e4567-e89b-12d3-a456-426614174000')">Learn more</a>
-            </p>          </div>
+              <a [href]="vtolUrl" class="btn btn-lg btn-primary">Learn more</a>
+            </p>          
+          </div>
         </div>
       </div>
 
@@ -40,7 +41,7 @@
             <h1>Cinematic FPV Drone</h1>
             <p>Shoot cinematic FPV footage</p>
             <p>
-              <a class="btn btn-lg btn-primary" (click)="redirectToBlog('123e4567-e89b-12d3-a456-426614174000')">Learn more</a>
+              <a class="btn btn-lg btn-primary" (click)="redirectToUrl(FpvUrl)">Learn more</a>
             </p>          </div>
         </div>
       </div>
@@ -67,7 +68,7 @@
 
     <hr class="featurette-divider">
 
-    <div class="row featurette hover" (click)="redirectToBlog('e3f2c1a4-5b6d-4c8e-9f7a-123456789abc')">
+    <div class="row featurette hover" (click)="redirectToUrl(vtolUrl)">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">3D printed VTOL<span class="text-body-secondary">(A vertical take-off and landing)</span></h2>
         <p class="lead">Sub 5kg fully 3D printed VTOL with up to 2 hours of automize flight time. With onboard computer for AI tasks.</p>
@@ -79,7 +80,7 @@
     
     <hr class="featurette-divider">
     
-    <div class="row featurette hover" (click)="redirectToBlog('123e4567-e89b-12d3-a456-426614174000')"> 
+    <div class="row featurette hover" (click)="redirectToUrl(bee25Url)"> 
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading fw-normal lh-1">Speedybee bee 25 </h2><span class="text-body-secondary">build guide</span>
         <p class="lead">Step by step tutorial to build sub 249g 4k FPV drone.</p>
@@ -91,7 +92,7 @@
     
     <hr class="featurette-divider">
     
-    <div class="row featurette hover" (click)="redirectToBlog('123e4567-e89b-12d3-a456-426614174000')">
+    <div class="row featurette hover" (click)="redirectToUrl(simpleFOCUrl)">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">Simeple FOC with ESP32<span class="text-body-secondary">     (Field Oriented Control)</span></h2>
         <p class="lead">Simplefoc project with three closed loop position and torque control</p>

@@ -3,6 +3,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FlashModule } from "./flash/flash.module";
 import { PrintModule } from "./print/print.module";
 import { DarkModeService } from "./sharing/services/dark-mode.service";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -11,7 +13,9 @@ import { DarkModeService } from "./sharing/services/dark-mode.service";
         BrowserModule,
         FlashModule,
         PrintModule,
-        DarkModeService
+        DarkModeService,
+        CommonModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: []

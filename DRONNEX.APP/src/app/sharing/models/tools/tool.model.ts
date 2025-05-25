@@ -34,5 +34,6 @@ export enum ResponseCode {
 export enum ToolType {
     PreFlightCalculator = 'pfc',
     LiveFlightMonitor = 'lfm',
-    ImageAnalyzer = 'ia'
+    ImageAnalyzer = 'ia',
+    TodoList = 'todo',
 }

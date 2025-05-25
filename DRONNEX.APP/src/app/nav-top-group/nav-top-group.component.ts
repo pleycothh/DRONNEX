@@ -24,5 +24,4 @@ constructor() { }
     this.darkModeService.updateDarkMode();
     console.log(this.darkModeService.darkModelSignal(), 'mode');
   }
-
 }

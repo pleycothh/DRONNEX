@@ -1,8 +1,8 @@
 {
-  "label": "Tutorials",
+  "label": "Tutorials - embedded",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "How to do anthing with Dronnex."
+    "description": "Let's learn how to do anything with me."
   }
 }

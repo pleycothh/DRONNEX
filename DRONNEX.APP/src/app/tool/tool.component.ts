@@ -5,6 +5,7 @@ import { ToolType } from '../sharing/models/tools/tool.model';
 import { LiveFlightMonitorComponent } from './live-flight-monitor/live-flight-monitor.component';
 import { ImageAnalyzerComponent } from './image-analyzer/image-analyzer.component';
 import { CommonModule } from '@angular/common';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @Component({
   selector: 'app-tool',
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
     ToolSideNavComponent,
     PreFlightCalculatorComponent,
     LiveFlightMonitorComponent,
-    ImageAnalyzerComponent
+    ImageAnalyzerComponent,
+    TodoListComponent
   ],
   templateUrl: './tool.component.html',
   styleUrl: './tool.component.scss'

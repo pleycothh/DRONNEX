@@ -1,0 +1,8 @@
+{
+  "label": "Field Oriented Control (FOC)",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Let's build FOC libraries with me, this library is build from 'DengFOC' and 'SimpleFOC' libraries."
+  }
+}

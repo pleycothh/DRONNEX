@@ -9,6 +9,7 @@
 
   <!-- Main Content -->
   <main class="main-content">
+    <app-todo-list *ngIf="selectedTool === toolType.TodoList"></app-todo-list>
     <app-pre-flight-calculator *ngIf="selectedTool === toolType.PreFlightCalculator"></app-pre-flight-calculator>
     <app-live-flight-monitor *ngIf="selectedTool === toolType.LiveFlightMonitor"></app-live-flight-monitor>
     <app-image-analyzer *ngIf="selectedTool === toolType.ImageAnalyzer"></app-image-analyzer>

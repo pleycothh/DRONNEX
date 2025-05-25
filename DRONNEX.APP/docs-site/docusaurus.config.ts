@@ -108,7 +108,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/category/tutorials',
+              to: '/docs/category/tutorials---embedded',
             },
             {
               label: 'Blog',
