@@ -28,7 +28,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en'], 
   },
 
   presets: [
@@ -88,6 +88,11 @@ const config: Config = {
         },
 
         // right side
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+      
         {
           href: 'https://www.dronnex.com',
           label: 'Back to Dronnex',
