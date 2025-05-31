@@ -1,0 +1,196 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+---
+sidebar_position: 2
+---
+
+# Hardware
+
+## Introduction
+- DengFOC-v4
+- MKS SimpleFOC v3.3 plus
+
+## DengFOC-v4
+**MCU: ESP32-WROOM-DA Module**
+
+**Current Sensor: Inline current**
+
+**Max Current: 5A each with cooling**
+
+
+<Tabs>
+  <TabItem value="s" label="AS-5600" default>
+  ```jsx title="open-loop.ino"
+    // Deng's FOC AS5600 test case：DengFOCV4
+    #include <SimpleFOC.h>
+
+    MagneticSensorI2C sensor0 = MagneticSensorI2C(AS5600_I2C);
+    MagneticSensorI2C sensor1 = MagneticSensorI2C(AS5600_I2C);
+    TwoWire I2Cone = TwoWire(0);
+    TwoWire I2Ctwo = TwoWire(1);
+
+
+    void setup() {
+      Serial.begin(115200);
+
+      I2Cone.begin(19, 18, 400000UL); // AS5600_M0
+      I2Ctwo.begin(23, 5, 400000UL); // AS5600_M1
+      
+      sensor0.init(&I2Cone);
+      sensor1.init(&I2Ctwo);
+    }
+
+    void loop() {
+      sensor0.update();  // Remove if simple foc lib 2.20 and above.
+      sensor1.update();
+      Serial.print(sensor0.getAngle());
+      Serial.print(" - ");
+      Serial.println(sensor1.getAngle());
+      Serial.println();
+    }
+  ```
+  </TabItem>
+  <TabItem value="d" label="PWM Test">
+    ```jsx title="open-loop.ino"
+      BLDCMotor motor = BLDCMotor(7);
+      BLDCDriver3PWM driver = BLDCDriver3PWM(32, 33, 25, 12);
+
+      // BLDC motor & driver instance
+      BLDCMotor motor1 = BLDCMotor(7);
+      BLDCDriver3PWM driver1 = BLDCDriver3PWM(26, 27, 14, 12);
+
+      //目标变量
+      float target_velocity = 10;
+      uint32_t prev_millis;
+
+      //设置报警电压
+      #define UNDERVOLTAGE_THRES 11.1
+
+      //串口指令设置
+      Commander command = Commander(Serial);
+      void doTarget(char* cmd) {
+        command.scalar(&target_velocity, cmd);
+      }
+
+      void board_check();
+      float get_vin_Volt();
+      void board_init();
+      bool flag_under_voltage = false;
+
+
+      void setup() {}
+      void loop() {}
+    ```
+    </TabItem>
+
+    <TabItem value="currrent" label="Inline Current">
+    ```jsx title="Inline-current.cpp"
+    #include <Arduino.h> 
+    #include "InlineCurrent.h"
+
+
+    #define _ADC_VOLTAGE 3.3f  
+    #define _ADC_RESOLUTION 4095.0f 
+
+    #define _ADC_CONV ( (_ADC_VOLTAGE) / (_ADC_RESOLUTION) )
+
+    #define NOT_SET -12345.0
+    #define _isset(a) ( (a) != (NOT_SET) )
+
+    CurrSense::CurrSense(int Mot_Num)
+    {
+      if(Mot_Num==0)
+      {
+        pinA = 39;
+        pinB = 36;
+        //int pinC;
+        _shunt_resistor = 0.01;
+        amp_gain  = 50;
+        
+        volts_to_amps_ratio = 1.0f /_shunt_resistor / amp_gain; // volts to amps
+        
+        // gains for each phase
+        gain_a = volts_to_amps_ratio;
+        gain_b = volts_to_amps_ratio;
+        gain_c = volts_to_amps_ratio;
+      }
+      if(Mot_Num==1)
+      {
+        pinA = 35;
+        pinB = 34;
+        //int pinC;
+        _shunt_resistor = 0.01;
+        amp_gain  = 50;
+        
+        volts_to_amps_ratio = 1.0f /_shunt_resistor / amp_gain; // volts to amps
+        
+        // gains for each phase
+        gain_a = volts_to_amps_ratio;
+        gain_b = volts_to_amps_ratio;
+        gain_c = volts_to_amps_ratio;
+      }
+    }
+    float CurrSense::readADCVoltageInline(const int pinA){
+      uint32_t raw_adc = analogRead(pinA);
+      return raw_adc * _ADC_CONV;
+    }
+    void CurrSense::configureADCInline(const int pinA,const int pinB, const int pinC){
+      pinMode(pinA, INPUT);
+      pinMode(pinB, INPUT);
+      if( _isset(pinC) ) pinMode(pinC, INPUT);
+    }
+
+    void CurrSense::calibrateOffsets(){
+        const int calibration_rounds = 1000;
+
+        // 查找0电流时候的电压
+        offset_ia = 0;
+        offset_ib = 0;
+        offset_ic = 0;
+        for (int i = 0; i < calibration_rounds; i++) {
+            offset_ia += readADCVoltageInline(pinA);
+            offset_ib += readADCVoltageInline(pinB);
+            if(_isset(pinC)) offset_ic += readADCVoltageInline(pinC);
+            delay(1);
+        }
+        offset_ia = offset_ia / calibration_rounds;
+        offset_ib = offset_ib / calibration_rounds;
+        if(_isset(pinC)) offset_ic = offset_ic / calibration_rounds;
+    }
+
+    void CurrSense::init(){
+        configureADCInline(pinA,pinB,pinC);
+        calibrateOffsets();
+    }
+
+    void CurrSense::getPhaseCurrents(){
+        current_a = (readADCVoltageInline(pinA) - offset_ia)*gain_a;// amps
+        current_b = (readADCVoltageInline(pinB) - offset_ib)*gain_b;// amps
+        current_c = (!_isset(pinC)) ? 0 : (readADCVoltageInline(pinC) - offset_ic)*gain_c; // amps
+    }
+
+    ```
+    </TabItem>
+
+    <TabItem value="pid" label="PID">
+    ```jsx title="DengFOC-Lensson9.ino"
+
+    //2208 100kv
+    DFOC_M0_SET_ANGLE_PID(1, 0, 0, 100000, 30);
+    DFOC_M0_SET_VEL_PID(0.02, 1, 0, 100000, 0.5);
+    DFOC_M0_SET_CURRENT_PID(5, 200, 0, 100000);
+    DFOC_M0_set_Velocity_Angle(serial_motor_target());
+
+    
+    //5010 360kv
+    DFOC_M1_SET_ANGLE_PID(0.2, 0, 0, 100000, 30);
+    DFOC_M1_SET_VEL_PID(0.05, 0.5, 0, 100000, 0.5);
+    DFOC_M1_SET_CURRENT_PID(5, 200, 0, 100000);
+    DFOC_M1_set_Velocity_Angle(serial_motor_target());
+    ```
+    </TabItem>
+</Tabs>
+
+
+
