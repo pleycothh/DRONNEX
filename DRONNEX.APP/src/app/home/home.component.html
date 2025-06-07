@@ -1,10 +1,13 @@
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" ></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
     </div>
     <div class="carousel-inner">
+
     <!-- Card 1 -->
     <div class="carousel-item active">
       <img src="assets/home-top-1.jpg" class="d-block w-100" alt="Drone image 1">
@@ -45,6 +48,20 @@
             </p>          </div>
         </div>
       </div>
+    
+      <!-- Card 4 -->
+    <div class="carousel-item">
+      <img src="assets/home-top-4.jpg" class="d-block w-100" alt="Drone image 4">
+      <div class="container">
+        <div class="carousel-caption text-start" style="color: white;">
+          <h1>ESP32 + FOC balance bot</h1>
+          <p>Shoot cinematic FPV footage</p>
+          <p>
+            <a class="btn btn-lg btn-primary" (click)="redirectToUrl(espBotUrl)">Learn more</a>
+          </p>          
+        </div>
+      </div>
+    </div>
 
 
     </div>
