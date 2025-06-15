@@ -1,0 +1,8 @@
+{
+  "label": "Mechatronic",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Mechatronic helper documentation, this is a collection of various mechatronic related topics, such as sensors, actuators, and more."
+  }
+}

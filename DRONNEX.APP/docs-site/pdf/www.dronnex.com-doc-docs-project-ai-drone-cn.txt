@@ -1,0 +1,6 @@
+https://www.dronnex.com/doc/docs/project/ai-drone-en
+https://www.dronnex.com/doc/docs/category/first-person-view-fpv
+https://www.dronnex.com/doc/docs/FPV/bee-25
+https://www.dronnex.com/doc/docs/category/field-oriented-control-foc
+https://www.dronnex.com/doc/docs/FOC/foc-library
+https://www.dronnex.com/doc/docs/FOC/hardware
