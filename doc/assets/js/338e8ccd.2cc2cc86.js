@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_site=self.webpackChunkdocs_site||[]).push([[8718],{3457:s=>{s.exports=JSON.parse('{"tags":[{"label":"simpleFOC","permalink":"/doc/blog/tags/simple-foc","count":1},{"label":"chatgpt","permalink":"/doc/blog/tags/chatgpt","count":3}]}')}}]);
